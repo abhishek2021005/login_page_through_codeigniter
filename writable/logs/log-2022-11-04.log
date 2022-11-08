@@ -1,0 +1,520 @@
+ERROR - 2022-11-04 00:07:34 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'root', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('adityatulsyan80...', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'adityatulsyan80...', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('adityatulsyan80...', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'adityatulsyan80...', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 00:07:34 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('adityatulsyan800@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'adityatulsyan800@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 00:29:39 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'root', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('ad@gmail.com', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ad@gmail.com', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('ad@gmail.com', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ad@gmail.com', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 00:29:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('ad@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ad@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 00:43:13 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'admin', 'admin', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 00:43:13 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 00:44:09 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'admin', 'admin', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 00:44:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 00:47:32 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'admin', 'admin', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 00:47:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 02:39:07 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'admin', 'admin', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('ad@gmail.com', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ad@gmail.com', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('ad@gmail.com', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ad@gmail.com', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 02:39:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('ad@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ad@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 02:39:50 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'admin', 'admin', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 02:39:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 10:43:58 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'admin', 'admin', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('a@email.com', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'a@email.com', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('a@email.com', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'a@email.com', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 10:43:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('a@email.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'a@email.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 10:45:57 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'admin', 'admin', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.co...', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.co...', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 10:45:57 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('aditya@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aditya@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-04 11:03:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'admin'@'localhost' (using password: YES) in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'admin', 'admin', 'ci-4', 3306, '', 0)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('a@gmail.com', 'email', Array, NULL, 'email')
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'a@gmail.com', Array, Array)
+#7 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('a@gmail.com', 'email', Array, NULL, 'email')
+#5 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'a@gmail.com', Array, Array)
+#6 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 /Users/adityatulsyan/ci-news/app/Controllers/SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/adityatulsyan/ci-news/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/adityatulsyan/ci-news/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(46): require_once('/Users/adityatu...')
+#13 {main}
+CRITICAL - 2022-11-04 11:03:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Validation/Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/Validation/Validation.php(315): CodeIgniter\Validation\Rules->is_unique('a@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'a@gmail.com', [...], [...])
+ 6 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
